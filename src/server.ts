@@ -24,7 +24,11 @@ app.get('/', (req, res) => {
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/workouts", workoutRouter);
 
-app.listen(port, () => {
-    console.log(`server... running on port: ${port}`);
-});
+const startServer = () => {
 
+    app.listen(port, () => {
+        console.log(`server... running on port: ${port}`);
+    });  
+}
+
+startServer()
